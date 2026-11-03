@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{c4d0dca0-9f18-4630-9532-057f497bab05}</ProjectGuid>
+    <RootNamespace>winobjenum</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)build\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)build\obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions); _AMD64_</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Manifest>
+      <EnableSegmentHeap>true</EnableSegmentHeap>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\cli\cli.cpp" />
+    <ClCompile Include="src\report\report-output.cpp" />
+    <ClCompile Include="src\access\access-context.cpp" />
+    <ClCompile Include="src\access\access-tests.cpp" />
+    <ClCompile Include="src\access\access-worker.cpp" />
+    <ClCompile Include="src\access\native-probe.cpp" />
+    <ClCompile Include="src\cli\access-output.cpp" />
+    <ClCompile Include="src\enumerators\device-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\alpc-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\flt-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\event-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\job-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\mutant-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\semaphore-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\timer-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\namedpipe-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\rpc-enumerator.cpp" />
+    <ClCompile Include="src\enumerators\sessions-enumerator.cpp" />
+    <ClCompile Include="src\native\object-directory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\enumerators\alpc-enumerator.h" />
+    <ClInclude Include="src\enumerators\device-enumerator.h" />
+    <ClInclude Include="src\enumerators\flt-enumerator.h" />
+    <ClInclude Include="src\enumerators\event-enumerator.h" />
+    <ClInclude Include="src\enumerators\job-enumerator.h" />
+    <ClInclude Include="src\enumerators\mutant-enumerator.h" />
+    <ClInclude Include="src\enumerators\semaphore-enumerator.h" />
+    <ClInclude Include="src\enumerators\timer-enumerator.h" />
+    <ClInclude Include="src\enumerators\namedpipe-enumerator.h" />
+    <ClInclude Include="src\enumerators\rpc-enumerator.h" />
+    <ClInclude Include="src\enumerators\sessions-enumerator.h" />
+    <ClInclude Include="src\native\object-directory.h" />
+    <ClInclude Include="src\core\enumerator-manager.h" />
+    <ClInclude Include="src\enumerators\enumerators.h" />
+    <ClInclude Include="src\interfaces\IWinObjEnumerator.h" />
+    <ClInclude Include="src\interfaces\IWinObjTest.h" />
+    <ClInclude Include="src\native\alpc.h" />
+    <ClInclude Include="src\native\nt.h" />
+    <ClInclude Include="src\access\access-tests.h" />
+    <ClInclude Include="src\access\access-worker.h" />
+    <ClInclude Include="src\access\native-probe.h" />
+    <ClInclude Include="src\core\access-result.h" />
+    <ClInclude Include="src\core\access-manager.h" />
+    <ClInclude Include="src\native\handle.h" />
+    <ClInclude Include="src\cli\access-output.h" />
+    <ClInclude Include="src\report\scan-report.h" />
+    <ClInclude Include="src\report\report-output.h" />
+    <ClInclude Include="src\report\report-template.h" />
+    <ClInclude Include="src\core\types.h" />
+    <ClInclude Include="src\core\win-obj.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="docs\report-formats.md" />
+    <None Include="tests\report\report-smoke.cpp" />
+    <None Include="tests\report\report-ui.test.js" />
+    <None Include="tests\report\cli-export.ps1" />
+    <None Include="docs\access-testing.md" />
+    <None Include="tests\access\access-smoke.cpp" />
+    <None Include="tests\discovery-smoke.cpp" />
+    <None Include="tests\run.cmd" />
+  </ItemGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="src\process\process-associator.cpp" />
+    <ClCompile Include="src\process\process-worker.cpp" />
+    <ClInclude Include="src\process\process-associator.h" />
+    <ClInclude Include="src\process\process-worker.h" />
+    <ClInclude Include="src\core\process-info.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\process-associations.md" />
+    <None Include="tests\process\process-smoke.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\collection\collector-data.cpp" />
+    <ClCompile Include="src\collection\admin-collector.cpp" />
+    <ClInclude Include="src\collection\collector-data.h" />
+    <ClInclude Include="src\collection\admin-collector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\administrator-collection.md" />
+    <None Include="tests\collection\collection-smoke.cpp" />
+    <None Include="tests\collection\admin-integration.cpp" />
+    <None Include="tests\collection\run-admin-integration.cmd" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- WDK 26100 can install the VS 18 toolset while shipping only VS 17 task DLLs.
+       Use the installed task assembly without modifying the SDK or VS installation. -->
+  <PropertyGroup>
+    <WdkTasksFallback Condition="!Exists('$(WDKContentRoot)build\$(WDKBuildFolder)\bin\Microsoft.DriverKit.Build.Tasks.$(VisualStudioVersion).dll') and Exists('$(WDKContentRoot)build\$(WDKBuildFolder)\bin\Microsoft.DriverKit.Build.Tasks.17.0.dll')">$(WDKContentRoot)build\$(WDKBuildFolder)\bin\Microsoft.DriverKit.Build.Tasks.17.0.dll</WdkTasksFallback>
+  </PropertyGroup>
+  <UsingTask TaskName="ValidateNTTargetVersion" AssemblyFile="$(WdkTasksFallback)" Override="true" Condition="'$(WdkTasksFallback)'!=''" />
+  <UsingTask TaskName="Telemetry" AssemblyFile="$(WdkTasksFallback)" Override="true" Condition="'$(WdkTasksFallback)'!=''" />
+  <UsingTask TaskName="Telemetry_Packaging" AssemblyFile="$(WdkTasksFallback)" Override="true" Condition="'$(WdkTasksFallback)'!=''" />
+  <UsingTask TaskName="Wpp" AssemblyFile="$(WdkTasksFallback)" Override="true" Condition="'$(WdkTasksFallback)'!=''" />
+  <UsingTask TaskName="StampInf" AssemblyFile="$(WdkTasksFallback)" Override="true" Condition="'$(WdkTasksFallback)'!=''" />
+  <UsingTask TaskName="Inf2Cat" AssemblyFile="$(WdkTasksFallback)" Override="true" Condition="'$(WdkTasksFallback)'!=''" />
+  <UsingTask TaskName="SignTask" AssemblyFile="$(WdkTasksFallback)" Override="true" Condition="'$(WdkTasksFallback)'!=''" />
+  <UsingTask TaskName="Binplace" AssemblyFile="$(WdkTasksFallback)" Override="true" Condition="'$(WdkTasksFallback)'!=''" />
+</Project>

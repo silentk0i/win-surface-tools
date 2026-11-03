@@ -1,0 +1,15 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="win-obj-enum.vcxproj" />
+  <Project Path="win-obj-dump.vcxproj">
+    <Platform Solution="*|x86" Project="x64" />
+    <Build Solution="*|x86" Project="false" />
+  </Project>
+  <Project Path="win-obj-dump-driver.vcxproj">
+    <Platform Solution="*|x86" Project="x64" />
+    <Build Solution="*|x86" Project="false" />
+  </Project>
+</Solution>
